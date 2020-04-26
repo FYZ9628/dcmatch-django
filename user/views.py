@@ -38,7 +38,7 @@ def search_user(request):
     try:
         data = json.loads(request.body)
         # 获取符合条件的 user 数据
-        users = User.objects.filter(name=data.__getitem__('name'))
+        users = User.objects.filter(name=data.__getitem__('keywords'))
         serializer = UserSerializer(users, many=True)
         res = {
             "code": 200,
@@ -201,13 +201,15 @@ def update_user(request):
 def delete_user(request):
     try:
         data = json.loads(request.body)
-        user = User(account=data.__getitem__('account'),
+        user = User(id=data.__getitem__('id'),
+                    account=data.__getitem__('account'),
                     phone=data.__getitem__('phone'),
                     password=data.__getitem__('password'),
                     name=data.__getitem__('name'),
                     type=data.__getitem__('type'))
         # 获取一个 user 数据
-        users = User.objects.filter(account=user.account)
+        # users = User.objects.filter(account=user.account)
+        users = User.objects.filter(id=user.id)
         print(users.__len__())
         if users.__len__() > 0:
             users.delete()
