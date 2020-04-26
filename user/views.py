@@ -32,20 +32,40 @@ def get_all_user(request):
     return HttpResponse(json.dumps(res), content_type="application/json")
 
 
+# post 需要加，get请求不用加
 @csrf_exempt
-def get_user(request):
+def search_user(request):
+    try:
+        data = json.loads(request.body)
+        # 获取符合条件的 user 数据
+        users = User.objects.filter(name=data.__getitem__('name'))
+        serializer = UserSerializer(users, many=True)
+        res = {
+            "code": 200,
+            "data": serializer.data
+        }
+    except Exception as e:
+        res = {
+            "code": 0,
+            "errMsg": e
+        }
+    return HttpResponse(json.dumps(res), content_type="application/json")
+
+
+@csrf_exempt
+def search_user_by_account(request):
     try:
         data = json.loads(request.body)
         # 获取一个 user 数据
-        user = User.objects.filter(id=data.__getitem__('keywords'))
-        if user.__len__() >= 1:
+        users = User.objects.filter(account=data.__getitem__('keywords'))
+        if users.__len__() >= 1:
             temp_user = {
-                "id": user[0].id,
-                "account": user[0].account,
-                "phone": user[0].phone,
-                "password": user[0].password,
-                "name": user[0].name,
-                "type": user[0].type
+                "id": users[0].id,
+                "account": users[0].account,
+                "phone": users[0].phone,
+                "password": users[0].password,
+                "name": users[0].name,
+                "type": users[0].type
             }
         else:
             temp_user = {}
@@ -74,17 +94,100 @@ def get_user(request):
     return HttpResponse(json.dumps(res), content_type="application/json")
 
 
-# post 需要加，get请求不用加
 @csrf_exempt
-def search_user(request):
+def search_user_by_phone(request):
     try:
         data = json.loads(request.body)
-        # 获取符合条件的 user 数据
-        users = User.objects.filter(name=data.__getitem__('keywords'))
-        serializer = UserSerializer(users, many=True)
+        # 获取一个 user 数据
+        users = User.objects.filter(phone=data.__getitem__('keywords'))
+        if users.__len__() >= 1:
+            temp_user = {
+                "id": users[0].id,
+                "account": users[0].account,
+                "phone": users[0].phone,
+                "password": users[0].password,
+                "name": users[0].name,
+                "type": users[0].type
+            }
+        else:
+            temp_user = {}
         res = {
             "code": 200,
-            "data": serializer.data
+            "data": temp_user
+        }
+    except Exception as e:
+        res = {
+            "code": 0,
+            "errMsg": e
+        }
+    return HttpResponse(json.dumps(res), content_type="application/json")
+
+
+@csrf_exempt
+def add_user(request):
+    try:
+        data = json.loads(request.body)
+        user = User(account=data.__getitem__('account'),
+                    phone=data.__getitem__('phone'),
+                    password=data.__getitem__('password'),
+                    name=data.__getitem__('name'),
+                    type=data.__getitem__('type'))
+        # 获取一个 user 数据
+        users = User.objects.filter(account=user.account)
+        print(users.__len__())
+        if users.__len__() > 0:
+            temp_user = {}
+        else:
+            user.save()
+            temp_user = {
+                "id": users[0].id,
+                "account": users[0].account,
+                "phone": users[0].phone,
+                "password": users[0].password,
+                "name": users[0].name,
+                "type": users[0].type
+            }
+        res = {
+            "code": 200,
+            "data": temp_user
+        }
+    except Exception as e:
+        res = {
+            "code": 0,
+            "errMsg": e
+        }
+    return HttpResponse(json.dumps(res), content_type="application/json")
+
+
+@csrf_exempt
+def update_user(request):
+    try:
+        data = json.loads(request.body)
+        user = User(account=data.__getitem__('account'),
+                    phone=data.__getitem__('phone'),
+                    password=data.__getitem__('password'),
+                    name=data.__getitem__('name'),
+                    type=data.__getitem__('type'))
+        # 获取一个 user 数据
+        users = User.objects.filter(account=user.account)
+        print(users.__len__())
+        if users.__len__() > 0:
+            users.update(phone=user.phone,
+                         password=user.password,
+                         type=user.type)
+            temp_user = {
+                "id": users[0].id,
+                "account": users[0].account,
+                "phone": users[0].phone,
+                "password": users[0].password,
+                "name": users[0].name,
+                "type": users[0].type
+            }
+        else:
+            temp_user = {}
+        res = {
+            "code": 200,
+            "data": temp_user
         }
     except Exception as e:
         res = {
@@ -98,16 +201,26 @@ def search_user(request):
 def delete_user(request):
     try:
         data = json.loads(request.body)
+        user = User(account=data.__getitem__('account'),
+                    phone=data.__getitem__('phone'),
+                    password=data.__getitem__('password'),
+                    name=data.__getitem__('name'),
+                    type=data.__getitem__('type'))
         # 获取一个 user 数据
-        user = User.objects.filter(id=data.__getitem__('keywords')).delete()
-        print(user.__len__())
-        if user.__len__() > 2:
-            delete_info = '删除成功'
+        users = User.objects.filter(account=user.account)
+        print(users.__len__())
+        if users.__len__() > 0:
+            users.delete()
+            result = {
+                "code": 100
+            }
         else:
-            delete_info = '删除失败'
+            result = {
+                "code": 400
+            }
         res = {
             "code": 200,
-            "data": delete_info
+            "data": result
         }
     except Exception as e:
         res = {
