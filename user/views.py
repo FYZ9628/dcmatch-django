@@ -140,12 +140,11 @@ def add_user(request):
         else:
             user.save()
             temp_user = {
-                "id": users[0].id,
-                "account": users[0].account,
-                "phone": users[0].phone,
-                "password": users[0].password,
-                "name": users[0].name,
-                "type": users[0].type
+                "account": user.account,
+                "phone": user.phone,
+                "password": user.password,
+                "name": user.name,
+                "type": user.type
             }
         res = {
             "code": 200,
