@@ -14,6 +14,9 @@ from register.serializers import RegisterSerializer
 
 """
 
+# post 需要加，get请求不用加
+# @csrf_exempt
+
 
 def get_all_register(request):
     try:
@@ -30,52 +33,6 @@ def get_all_register(request):
             "errMsg": e
         }
     return HttpResponse(json.dumps(res), content_type="application/json")
-
-
-# post 需要加，get请求不用加
-# @csrf_exempt
-# def search_register(request):
-#     try:
-#         data = json.loads(request.body)
-#         # 获取符合条件的 user 数据
-#         registers = Register.objects.filter(name=data.__getitem__('keywords'))
-#         serializer = RegisterSerializer(registers, many=True)
-#         res = {
-#             "code": 200,
-#             "data": serializer.data
-#         }
-#     except Exception as e:
-#         res = {
-#             "code": 0,
-#             "errMsg": e
-#         }
-#     return HttpResponse(json.dumps(res), content_type="application/json")
-#
-#
-# @csrf_exempt
-# def search_register_by_account(request):
-#     try:
-#         data = json.loads(request.body)
-#         # 获取一个 user 数据
-#         registers = Register.objects.filter(account=data.__getitem__('keywords'))
-#         if registers.__len__() >= 1:
-#             temp_register = {
-#                 "id": registers[0].id,
-#                 "phone": registers[0].phone,
-#                 "password": registers[0].password
-#             }
-#         else:
-#             temp_register = {}
-#         res = {
-#             "code": 200,
-#             "data": temp_register
-#         }
-#     except Exception as e:
-#         res = {
-#             "code": 0,
-#             "errMsg": e
-#         }
-#     return HttpResponse(json.dumps(res), content_type="application/json")
 
 
 @csrf_exempt
