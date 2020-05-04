@@ -18,7 +18,7 @@ class User(models.Model):
     type = models.IntegerField()
 
     def __str__(self):
-        return self.name
+        return self.id
 
     # def __unicode__(self):
     #     return self.username

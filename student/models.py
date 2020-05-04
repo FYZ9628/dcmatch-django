@@ -1,5 +1,7 @@
 from django.db import models
 
+from user.models import User
+
 """"
     1、生成迁移文件 -- 》 将模板生成sql语句
         makemigrations
@@ -9,18 +11,20 @@ from django.db import models
 
 
 # Create your models here.
+
 class Student(models.Model):
     id = models.AutoField(primary_key=True)
-    user = models.ForeignKey('User', on_delete=models.CASCADE)
+    # user = models.OneToOneField("user.User", on_delete=models.CASCADE)
+    user = models.ForeignKey("user.User", on_delete=models.CASCADE)
     sex = models.CharField(max_length=255)
     email = models.CharField(max_length=255)
     school = models.CharField(max_length=255)
-    admissionDate = models.CharField(max_length=20)
-    graduationDate = models.CharField(max_length=20)
+    admission_date = models.CharField(max_length=20)
+    graduation_date = models.CharField(max_length=20)
     academy = models.CharField(max_length=255)
     major = models.CharField(max_length=255)
     education = models.CharField(max_length=255)
-    idImg = models.CharField(max_length=255)
+    id_img = models.CharField(max_length=255)
 
     def __str__(self):
         return self.id
