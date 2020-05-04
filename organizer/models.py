@@ -11,13 +11,13 @@ from django.db import models
 # Create your models here.
 class Organizer(models.Model):
     id = models.AutoField(primary_key=True)
-    user = models.ForeignKey('User', on_delete=models.CASCADE)
+    user = models.ForeignKey("user.User", on_delete=models.CASCADE)
     email = models.CharField(max_length=255)
     school = models.CharField(max_length=255)
-    establishDate = models.CharField(max_length=255)
-    schoolType = models.CharField(max_length=255)
-    schoolRunningType = models.CharField(max_length=255)
-    idImg = models.CharField(max_length=255)
+    establish_date = models.CharField(max_length=255)
+    school_type = models.CharField(max_length=255)
+    school_running_type = models.CharField(max_length=255)
+    id_img = models.CharField(max_length=255)
 
     def __str__(self):
         return self.id

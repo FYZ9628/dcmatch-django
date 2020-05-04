@@ -11,15 +11,15 @@ from django.db import models
 # Create your models here.
 class Teacher(models.Model):
     id = models.AutoField(primary_key=True)
-    user = models.ForeignKey('User', on_delete=models.CASCADE)
+    user = models.ForeignKey("user.User", on_delete=models.CASCADE)
     sex = models.CharField(max_length=255)
     email = models.CharField(max_length=255)
     school = models.CharField(max_length=255)
-    entryDate = models.CharField(max_length=255)
+    entry_date = models.CharField(max_length=255)
     academy = models.CharField(max_length=255)
-    professionalTitle = models.CharField(max_length=255)
+    professional_title = models.CharField(max_length=255)
     education = models.CharField(max_length=255)
-    idImg = models.CharField(max_length=255)
+    id_img = models.CharField(max_length=255)
 
     def __str__(self):
         return self.id

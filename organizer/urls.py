@@ -3,10 +3,11 @@ from . import views
 from django.urls import path
 
 urlpatterns = [
-    # path('getAllRegister', views.get_all_register),
-    # path('searchRegister', views.search_register_by_phone),
-    # path('addRegister', views.add_register),
-    # path('updateRegister', views.update_register),
-    # path('updateRegisterById', views.update_register_by_id),
-    # path('deleteRegister', views.delete_register),
+    path('getAllOrganizer', views.get_all_organizer),
+    path('organizerInfo', views.get_all_organizer),
+    path('searchOrganizer', views.search_organizer),
+    path('searchOrganizerByAccount', views.search_organizer_by_account),
+    path('addOrganizer', views.add_organizer),
+    path('updateOrganizer', views.update_organizer),
+    path('deleteOrganizer', views.delete_organizer),
 ]
