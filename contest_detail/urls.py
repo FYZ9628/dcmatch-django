@@ -3,10 +3,12 @@ from . import views
 from django.urls import path
 
 urlpatterns = [
-    # path('getAllRegister', views.get_all_register),
-    # path('searchRegister', views.search_register_by_phone),
-    # path('addRegister', views.add_register),
-    # path('updateRegister', views.update_register),
-    # path('updateRegisterById', views.update_register_by_id),
-    # path('deleteRegister', views.delete_register),
+    path('getAllContestDetail', views.get_all_contest_detail),
+    path('searchContestDetail', views.search_all_contest_detail_by_title_like),
+    path('searchContestDetailById', views.search_contest_detail_by_id),
+    path('searchContestDetailByContestTitle', views.search_contest_detail_by_title),
+    path('searchContestDetailByOrganizerAccount', views.search_all_contest_detail_by_organizer_account),
+    path('addContestDetail', views.add_contest_detail),
+    path('updateContestDetail', views.update_contest_detail),
+    path('deleteContestDetail', views.delete_contest_detail),
 ]

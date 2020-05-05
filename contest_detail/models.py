@@ -11,18 +11,18 @@ from django.db import models
 # Create your models here.
 class ContestDetail(models.Model):
     id = models.AutoField(primary_key=True)
-    contestTitle = models.CharField(max_length=255)
-    organizer = models.ForeignKey('Organizer', on_delete=models.CASCADE)
-    contestContent = models.TextField()
-    signUpStartTime = models.CharField()
-    signUpEndTime = models.CharField()
-    publishTime = models.CharField()
+    contest_title = models.CharField(max_length=255)
+    organizer = models.ForeignKey('organizer.Organizer', on_delete=models.CASCADE)
+    contest_content = models.TextField()
+    sign_up_start_time = models.CharField(max_length=255)
+    sign_up_end_time = models.CharField(max_length=255)
+    publish_time = models.CharField(max_length=255)
     place = models.CharField(max_length=255)
-    holdDate = models.CharField(max_length=255)
-    holdStartTime = models.CharField(max_length=255)
-    holdEndTime = models.CharField(max_length=255)
+    hold_date = models.CharField(max_length=255)
+    hold_start_time = models.CharField(max_length=255)
+    hold_end_time = models.CharField(max_length=255)
     type = models.CharField(max_length=255)
-    upperLimit = models.IntegerField()
+    upper_limit = models.IntegerField()
     state = models.CharField(max_length=20)
 
     def __str__(self):

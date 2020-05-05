@@ -45,8 +45,8 @@ INSTALLED_APPS = [
     'organizer',
     'school',
     'notice',
-    # 'banner',
-    # 'contest_detail',
+    'banner',
+    'contest_detail',
     # 'contest',
     # 'team_contest',
 ]
