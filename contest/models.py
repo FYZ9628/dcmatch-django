@@ -11,10 +11,10 @@ from django.db import models
 # Create your models here.
 class Contest(models.Model):
     id = models.AutoField(primary_key=True)
-    contestDetail = models.ForeignKey('ContestDetail', on_delete=models.CASCADE)
-    student = models.ForeignKey('Student', on_delete=models.CASCADE)
+    contest = models.ForeignKey('contest_detail.ContestDetail', on_delete=models.CASCADE)
+    student = models.ForeignKey('student.Student', on_delete=models.CASCADE)
     state = models.CharField(max_length=20)
-    ticketNumber = models.CharField(max_length=20)
+    ticket_number = models.CharField(max_length=20)
     score = models.IntegerField()
 
     def __str__(self):

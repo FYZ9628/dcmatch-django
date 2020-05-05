@@ -47,7 +47,7 @@ INSTALLED_APPS = [
     'notice',
     'banner',
     'contest_detail',
-    # 'contest',
+    'contest',
     # 'team_contest',
 ]
 

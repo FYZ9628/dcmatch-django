@@ -29,7 +29,7 @@ urlpatterns = [
     path('api/', include('notice.urls')),
     path('api/', include('banner.urls')),
     path('api/', include('contest_detail.urls')),
-    # path('api/', include('contest.urls')),
+    path('api/', include('contest.urls')),
     # path('api/', include('team_contest.urls')),
     # 和上面两个语句的作用一样，都是可以访问到数据，不同的是这种方法不用在user中创建一个urls表
     # url(r'^user', user_views.user),
