@@ -19,6 +19,8 @@ def get_all_user(request):
     try:
         # 获取所有 user 数据
         users = User.objects.all()
+        # 序列化适用于没有外键的表
+        # 有外键的表用序列化就只有引用的那一列列名
         serializer = UserSerializer(users, many=True)
         res = {
             "code": 200,

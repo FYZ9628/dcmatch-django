@@ -43,6 +43,12 @@ INSTALLED_APPS = [
     'student',
     'teacher',
     'organizer',
+    'school',
+    # 'notice',
+    # 'banner',
+    # 'contest_detail',
+    # 'contest',
+    # 'team_contest',
 ]
 
 MIDDLEWARE = [

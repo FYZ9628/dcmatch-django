@@ -3,7 +3,8 @@ from user.models import User
 
 # 用于编写序列化规则
 
-
+# 序列化适用于没有外键的表
+# 有外键的表用序列化就只有引用的那一列列名
 class UserSerializer(serializers.ModelSerializer):
     # ModelSerializer和Django中ModelForm功能相似
     # Serializer和Django中Form功能相似
