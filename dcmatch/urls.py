@@ -26,7 +26,7 @@ urlpatterns = [
     path('api/', include('teacher.urls')),
     path('api/', include('organizer.urls')),
     path('api/', include('school.urls')),
-    # path('api/', include('notice.urls')),
+    path('api/', include('notice.urls')),
     # path('api/', include('banner.urls')),
     # path('api/', include('contest_detail.urls')),
     # path('api/', include('contest.urls')),

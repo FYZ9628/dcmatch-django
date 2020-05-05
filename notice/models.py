@@ -12,8 +12,8 @@ from django.db import models
 class Notice(models.Model):
     id = models.AutoField(primary_key=True)
     title = models.CharField(max_length=255)
-    time = models.CharField()
-    organizer = models.ForeignKey('Organizer', on_delete=models.CASCADE)
+    time = models.CharField(max_length=255)
+    organizer = models.ForeignKey('organizer.Organizer', on_delete=models.CASCADE)
     content = models.TextField()
 
     def __str__(self):
