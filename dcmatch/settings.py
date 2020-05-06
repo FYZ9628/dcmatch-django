@@ -48,7 +48,7 @@ INSTALLED_APPS = [
     'banner',
     'contest_detail',
     'contest',
-    # 'team_contest',
+    'team_contest',
 ]
 
 MIDDLEWARE = [

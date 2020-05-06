@@ -11,14 +11,14 @@ from django.db import models
 # Create your models here.
 class TeamContest(models.Model):
     id = models.AutoField(primary_key=True)
-    contestDetail = models.ForeignKey('ContestDetail', on_delete=models.CASCADE)
-    student = models.ForeignKey('Student', on_delete=models.CASCADE)
-    teacherAccount = models.CharField(max_length=255)
-    teacherName = models.CharField(max_length=255)
+    contest = models.ForeignKey('contest_detail.ContestDetail', on_delete=models.CASCADE)
+    student = models.ForeignKey('student.Student', on_delete=models.CASCADE)
+    teacher_account = models.CharField(max_length=255)
+    teacher_name = models.CharField(max_length=255)
     state = models.CharField(max_length=20)
-    ticketNumber = models.CharField(max_length=20)
+    ticket_number = models.CharField(max_length=20)
     score = models.IntegerField()
-    teamName = models.CharField(max_length=255)
+    team_name = models.CharField(max_length=255)
     remarks = models.CharField(max_length=255)
 
     def __str__(self):

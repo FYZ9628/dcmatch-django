@@ -3,10 +3,17 @@ from . import views
 from django.urls import path
 
 urlpatterns = [
-    # path('getAllTeacher', views.get_all_teacher),
-    # path('searchTeacher', views.search_teacher),
-    # path('searchTeacherByAccount', views.search_teacher_by_account),
-    # path('addTeacher', views.add_teacher),
-    # path('updateTeacher', views.update_teacher),
-    # path('deleteTeacher', views.delete_teacher),
+    path('getAllTeamContest', views.get_all_team_contest),
+    path('searchTeamContestByStudentAccount', views.search_all_team_contest_by_student_account),
+    path('searchTeamContestByTeacherAccount', views.search_all_team_contest_by_teacher_account),
+    path('searchTeamContestByOrganizerAccount', views.search_all_team_contest_by_organizer_account),
+    path('searchTeamContestById', views.search_team_contest_by_id),
+    path('searchTeamContestByTeamName', views.search_all_team_contest_by_team_name),
+    path('searchTeamContestByTeamNameAndContestDetailId',
+         views.search_all_team_contest_by_team_name_and_contest_detail_id),
+    path('searchTeamContestByContestDetailId', views.search_all_team_contest_by_contest_detail_id),
+    path('addTeamContest', views.add_team_contest),
+    path('updateTeamContest', views.update_team_contest),
+    path('deleteTeamContest', views.delete_team_contest),
+    path('deleteTeam', views.delete_team_contest_by_team),
 ]
