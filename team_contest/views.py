@@ -709,89 +709,97 @@ def search_all_team_contest_by_contest_detail_id(request):
 def add_team_contest(request):
     try:
         data = json.loads(request.body)
-        team_contest = TeamContest(
-            contest_id=data.__getitem__('contestDetail').__getitem__('id'),
-            student_id=data.__getitem__('student').__getitem__('id'),
-            teacher_account=data.__getitem__('teacherAccount'),
-            teacher_name=data.__getitem__('teacherName'),
-            state=data.__getitem__('state'),
-            ticket_number=data.__getitem__('ticketNumber'),
-            score=data.__getitem__('score'),
-            team_name=data.__getitem__('teamName'),
-            remarks=data.__getitem__('remarks'),
-        )
         # 获取一个 register 数据
         team_contests = TeamContest.objects.filter(id=data.__getitem__('id'))
         print(team_contests.__len__())
         if team_contests.__len__() > 0:
-            temp_team_contest = {}
+            team_contest_list = []
         else:
-            team_contest.save()
-            temp_team_contest = {
-                "id": team_contest.id,
-                "contestDetail": {
-                    "id": team_contest.contest.id,
-                    "contestTitle": team_contest.contest.contest_title,
-                    "organizer": {
-                        "id": team_contest.contest.organizer.id,
-                        "user": {
-                            "id": team_contest.contest.organizer.user.id,
-                            "account": team_contest.contest.organizer.user.account,
-                            "phone": team_contest.contest.organizer.user.phone,
-                            "password": team_contest.contest.organizer.user.password,
-                            "name": team_contest.contest.organizer.user.name,
-                            "type": team_contest.contest.organizer.user.type
+            student_list = data.__getitem__('studentList')
+            team_contest_list = []
+            for index in range(len(student_list)):
+                remarks = ''
+                if index == data.__getitem__('remarksIndex'):
+                    remarks = '队长'
+                team_contest = TeamContest(
+                    contest_id=data.__getitem__('contestDetail').__getitem__('id'),
+                    student_id=student_list[index].__getitem__('id'),
+                    teacher_account=data.__getitem__('teacherAccount'),
+                    teacher_name=data.__getitem__('teacherName'),
+                    state=data.__getitem__('state'),
+                    ticket_number=data.__getitem__('ticketNumber'),
+                    score=data.__getitem__('score'),
+                    team_name=data.__getitem__('teamName'),
+                    remarks=remarks,
+                )
+                team_contest.save()
+                temp_team_contest = {
+                    "id": team_contest.id,
+                    "contestDetail": {
+                        "id": team_contest.contest.id,
+                        "contestTitle": team_contest.contest.contest_title,
+                        "organizer": {
+                            "id": team_contest.contest.organizer.id,
+                            "user": {
+                                "id": team_contest.contest.organizer.user.id,
+                                "account": team_contest.contest.organizer.user.account,
+                                "phone": team_contest.contest.organizer.user.phone,
+                                "password": team_contest.contest.organizer.user.password,
+                                "name": team_contest.contest.organizer.user.name,
+                                "type": team_contest.contest.organizer.user.type
+                            },
+                            "email": team_contest.contest.organizer.email,
+                            "school": team_contest.contest.organizer.school,
+                            "establishDate": team_contest.contest.organizer.establish_date,
+                            "schoolType": team_contest.contest.organizer.school_type,
+                            "schoolRunningType": team_contest.contest.organizer.school_running_type,
+                            "idImg": team_contest.contest.organizer.id_img
                         },
-                        "email": team_contest.contest.organizer.email,
-                        "school": team_contest.contest.organizer.school,
-                        "establishDate": team_contest.contest.organizer.establish_date,
-                        "schoolType": team_contest.contest.organizer.school_type,
-                        "schoolRunningType": team_contest.contest.organizer.school_running_type,
-                        "idImg": team_contest.contest.organizer.id_img
+                        "contestContent": team_contest.contest.contest_content,
+                        "signUpStartTime": team_contest.contest.sign_up_start_time,
+                        "signUpEndTime": team_contest.contest.sign_up_end_time,
+                        "publishTime": team_contest.contest.publish_time,
+                        "place": team_contest.contest.place,
+                        "holdDate": team_contest.contest.hold_date,
+                        "holdStartTime": team_contest.contest.hold_start_time,
+                        "holdEndTime": team_contest.contest.hold_end_time,
+                        "type": team_contest.contest.type,
+                        "upperLimit": team_contest.contest.upper_limit,
+                        "state": team_contest.contest.state
                     },
-                    "contestContent": team_contest.contest.contest_content,
-                    "signUpStartTime": team_contest.contest.sign_up_start_time,
-                    "signUpEndTime": team_contest.contest.sign_up_end_time,
-                    "publishTime": team_contest.contest.publish_time,
-                    "place": team_contest.contest.place,
-                    "holdDate": team_contest.contest.hold_date,
-                    "holdStartTime": team_contest.contest.hold_start_time,
-                    "holdEndTime": team_contest.contest.hold_end_time,
-                    "type": team_contest.contest.type,
-                    "upperLimit": team_contest.contest.upper_limit,
-                    "state": team_contest.contest.state
-                },
-                "student": {
-                    "id": team_contest.student.id,
-                    "user": {
-                        "id": team_contest.student.user.id,
-                        "account": team_contest.student.user.account,
-                        "phone": team_contest.student.user.phone,
-                        "password": team_contest.student.user.password,
-                        "name": team_contest.student.user.name,
-                        "type": team_contest.student.user.type
+                    "student": {
+                        "id": team_contest.student.id,
+                        "user": {
+                            "id": team_contest.student.user.id,
+                            "account": team_contest.student.user.account,
+                            "phone": team_contest.student.user.phone,
+                            "password": team_contest.student.user.password,
+                            "name": team_contest.student.user.name,
+                            "type": team_contest.student.user.type
+                        },
+                        "sex": team_contest.student.sex,
+                        "email": team_contest.student.email,
+                        "school": team_contest.student.school,
+                        "admissionDate": team_contest.student.admission_date,
+                        "graduationDate": team_contest.student.graduation_date,
+                        "academy": team_contest.student.academy,
+                        "major": team_contest.student.major,
+                        "education": team_contest.student.education,
+                        "idImg": team_contest.student.id_img
                     },
-                    "sex": team_contest.student.sex,
-                    "email": team_contest.student.email,
-                    "school": team_contest.student.school,
-                    "admissionDate": team_contest.student.admission_date,
-                    "graduationDate": team_contest.student.graduation_date,
-                    "academy": team_contest.student.academy,
-                    "major": team_contest.student.major,
-                    "education": team_contest.student.education,
-                    "idImg": team_contest.student.id_img
-                },
-                "teacherAccount": team_contest.teacher_account,
-                "teacherName": team_contest.teacher_name,
-                "state": team_contest.state,
-                "ticketNumber": team_contest.ticket_number,
-                "score": team_contest.score,
-                "teamName": team_contest.team_name,
-                "remarks": team_contest.remarks
-            }
+                    "teacherAccount": team_contest.teacher_account,
+                    "teacherName": team_contest.teacher_name,
+                    "state": team_contest.state,
+                    "ticketNumber": team_contest.ticket_number,
+                    "score": team_contest.score,
+                    "teamName": team_contest.team_name,
+                    "remarks": team_contest.remarks
+                }
+                team_contest_list.append(temp_team_contest)
         res = {
             "code": 200,
-            "data": temp_team_contest
+            # "data": temp_team_contest
+            "data": team_contest_list
         }
     except Exception as e:
         res = {
@@ -799,6 +807,102 @@ def add_team_contest(request):
             "errMsg": e
         }
     return HttpResponse(json.dumps(res, cls=CJsonEncoder), content_type="application/json")
+
+# 这个是添加单条团队竞赛报名信息的
+# @csrf_exempt
+# def add_team_contest(request):
+#     try:
+#         data = json.loads(request.body)
+#         team_contest = TeamContest(
+#             contest_id=data.__getitem__('contestDetail').__getitem__('id'),
+#             student_id=data.__getitem__('student').__getitem__('id'),
+#             teacher_account=data.__getitem__('teacherAccount'),
+#             teacher_name=data.__getitem__('teacherName'),
+#             state=data.__getitem__('state'),
+#             ticket_number=data.__getitem__('ticketNumber'),
+#             score=data.__getitem__('score'),
+#             team_name=data.__getitem__('teamName'),
+#             remarks=data.__getitem__('remarks'),
+#         )
+#         # 获取一个 register 数据
+#         team_contests = TeamContest.objects.filter(id=data.__getitem__('id'))
+#         print(team_contests.__len__())
+#         if team_contests.__len__() > 0:
+#             temp_team_contest = {}
+#         else:
+#             team_contest.save()
+#             temp_team_contest = {
+#                 "id": team_contest.id,
+#                 "contestDetail": {
+#                     "id": team_contest.contest.id,
+#                     "contestTitle": team_contest.contest.contest_title,
+#                     "organizer": {
+#                         "id": team_contest.contest.organizer.id,
+#                         "user": {
+#                             "id": team_contest.contest.organizer.user.id,
+#                             "account": team_contest.contest.organizer.user.account,
+#                             "phone": team_contest.contest.organizer.user.phone,
+#                             "password": team_contest.contest.organizer.user.password,
+#                             "name": team_contest.contest.organizer.user.name,
+#                             "type": team_contest.contest.organizer.user.type
+#                         },
+#                         "email": team_contest.contest.organizer.email,
+#                         "school": team_contest.contest.organizer.school,
+#                         "establishDate": team_contest.contest.organizer.establish_date,
+#                         "schoolType": team_contest.contest.organizer.school_type,
+#                         "schoolRunningType": team_contest.contest.organizer.school_running_type,
+#                         "idImg": team_contest.contest.organizer.id_img
+#                     },
+#                     "contestContent": team_contest.contest.contest_content,
+#                     "signUpStartTime": team_contest.contest.sign_up_start_time,
+#                     "signUpEndTime": team_contest.contest.sign_up_end_time,
+#                     "publishTime": team_contest.contest.publish_time,
+#                     "place": team_contest.contest.place,
+#                     "holdDate": team_contest.contest.hold_date,
+#                     "holdStartTime": team_contest.contest.hold_start_time,
+#                     "holdEndTime": team_contest.contest.hold_end_time,
+#                     "type": team_contest.contest.type,
+#                     "upperLimit": team_contest.contest.upper_limit,
+#                     "state": team_contest.contest.state
+#                 },
+#                 "student": {
+#                     "id": team_contest.student.id,
+#                     "user": {
+#                         "id": team_contest.student.user.id,
+#                         "account": team_contest.student.user.account,
+#                         "phone": team_contest.student.user.phone,
+#                         "password": team_contest.student.user.password,
+#                         "name": team_contest.student.user.name,
+#                         "type": team_contest.student.user.type
+#                     },
+#                     "sex": team_contest.student.sex,
+#                     "email": team_contest.student.email,
+#                     "school": team_contest.student.school,
+#                     "admissionDate": team_contest.student.admission_date,
+#                     "graduationDate": team_contest.student.graduation_date,
+#                     "academy": team_contest.student.academy,
+#                     "major": team_contest.student.major,
+#                     "education": team_contest.student.education,
+#                     "idImg": team_contest.student.id_img
+#                 },
+#                 "teacherAccount": team_contest.teacher_account,
+#                 "teacherName": team_contest.teacher_name,
+#                 "state": team_contest.state,
+#                 "ticketNumber": team_contest.ticket_number,
+#                 "score": team_contest.score,
+#                 "teamName": team_contest.team_name,
+#                 "remarks": team_contest.remarks
+#             }
+#         res = {
+#             "code": 200,
+#             "data": temp_team_contest
+#         }
+#     except Exception as e:
+#         res = {
+#             "code": 0,
+#             "errMsg": e
+#         }
+#     return HttpResponse(json.dumps(res, cls=CJsonEncoder), content_type="application/json")
 
 
 @csrf_exempt
