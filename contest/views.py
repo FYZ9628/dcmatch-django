@@ -82,11 +82,12 @@ def get_all_contest(request):
             }
             contests_list.append(temp_contest)
         # serializer = StudentSerializer(students, many=True)
-        res = {
-            "code": 200,
-            "data": contests_list
-            # "data": serializer.data
-        }
+        res = contests_list
+        # res = {
+        #     "code": 200,
+        #     "data": contests_list
+        #     # "data": serializer.data
+        # }
     except Exception as e:
         res = {
             "code": 0,
@@ -164,11 +165,12 @@ def search_all_contest_by_student_account(request):
             }
             contests_list.append(temp_contest)
         # serializer = StudentSerializer(students, many=True)
-        res = {
-            "code": 200,
-            "data": contests_list
-            # "data": serializer.data
-        }
+        res = contests_list
+        # res = {
+        #     "code": 200,
+        #     "data": contests_list
+        #     # "data": serializer.data
+        # }
     except Exception as e:
         res = {
             "code": 0,
@@ -246,11 +248,12 @@ def search_all_contest_by_organizer_account(request):
             }
             contests_list.append(temp_contest)
         # serializer = StudentSerializer(students, many=True)
-        res = {
-            "code": 200,
-            "data": contests_list
-            # "data": serializer.data
-        }
+        res = contests_list
+        # res = {
+        #     "code": 200,
+        #     "data": contests_list
+        #     # "data": serializer.data
+        # }
     except Exception as e:
         res = {
             "code": 0,
@@ -328,10 +331,11 @@ def search_contest_by_id(request):
             }
         else:
             temp_contest = {}
-        res = {
-            "code": 200,
-            "data": temp_contest
-        }
+        res = temp_contest
+        # res = {
+        #     "code": 200,
+        #     "data": temp_contest
+        # }
     except Exception as e:
         res = {
             "code": 0,
@@ -409,11 +413,12 @@ def search_all_contest_by_contest_detail_id(request):
             }
             contests_list.append(temp_contest)
         # serializer = StudentSerializer(students, many=True)
-        res = {
-            "code": 200,
-            "data": contests_list
-            # "data": serializer.data
-        }
+        res = contests_list
+        # res = {
+        #     "code": 200,
+        #     "data": contests_list
+        #     # "data": serializer.data
+        # }
     except Exception as e:
         res = {
             "code": 0,
@@ -498,10 +503,11 @@ def add_contest(request):
                 "ticketNumber": contest_1.ticket_number,
                 "score": contest_1.score
             }
-        res = {
-            "code": 200,
-            "data": temp_contest
-        }
+        res = temp_contest
+        # res = {
+        #     "code": 200,
+        #     "data": temp_contest
+        # }
     except Exception as e:
         res = {
             "code": 0,
@@ -585,10 +591,11 @@ def update_contest(request):
             }
         else:
             temp_contest = {}
-        res = {
-            "code": 200,
-            "data": temp_contest
-        }
+        res = temp_contest
+        # res = {
+        #     "code": 200,
+        #     "data": temp_contest
+        # }
     except Exception as e:
         res = {
             "code": 0,
@@ -613,10 +620,11 @@ def delete_contest(request):
             result = {
                 "code": 400
             }
-        res = {
-            "code": 200,
-            "data": result
-        }
+        res = result
+        # res = {
+        #     "code": 200,
+        #     "data": result
+        # }
     except Exception as e:
         res = {
             "code": 0,

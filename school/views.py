@@ -24,10 +24,11 @@ def get_all_school(request):
         # 获取所有 user 数据
         schools = School.objects.all()
         serializer = SchoolSerializer(schools, many=True)
-        res = {
-            "code": 200,
-            "data": serializer.data
-        }
+        res = serializer.data
+        # res = {
+        #     "code": 200,
+        #     "data": serializer.data
+        # }
     except Exception as e:
         res = {
             "code": 0,
@@ -44,10 +45,11 @@ def search_school_by_name_like(request):
         schools = School.objects.filter(Q(name__icontains=data.__getitem__('keywords')))
         # schools = School.objects.filter(name=data.__getitem__('keywords'))
         serializer = SchoolSerializer(schools, many=True)
-        res = {
-            "code": 200,
-            "data": serializer.data
-        }
+        res = serializer.data
+        # res = {
+        #     "code": 200,
+        #     "data": serializer.data
+        # }
     except Exception as e:
         res = {
             "code": 0,
@@ -72,10 +74,11 @@ def add_school(request):
                 "id": school.id,
                 "name": school.name
             }
-        res = {
-            "code": 200,
-            "data": temp_school
-        }
+        res = temp_school
+        # res = {
+        #     "code": 200,
+        #     "data": temp_school
+        # }
     except Exception as e:
         res = {
             "code": 0,
@@ -99,10 +102,11 @@ def update_school(request):
             }
         else:
             temp_school = {}
-        res = {
-            "code": 200,
-            "data": temp_school
-        }
+        res = temp_school
+        # res = {
+        #     "code": 200,
+        #     "data": temp_school
+        # }
     except Exception as e:
         res = {
             "code": 0,
@@ -127,10 +131,11 @@ def delete_school(request):
             result = {
                 "code": 400
             }
-        res = {
-            "code": 200,
-            "data": result
-        }
+        res = result
+        # res = {
+        #     "code": 200,
+        #     "data": result
+        # }
     except Exception as e:
         res = {
             "code": 0,

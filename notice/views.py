@@ -47,12 +47,14 @@ def get_all_notice(request):
             }
             notices_list.append(temp_notice)
         # serializer = StudentSerializer(students, many=True)
-        res = {
-            "code": 200,
-            "data": notices_list
-            # "data": serializer.data
-        }
+        res = notices_list
+        # res = {
+        #     "code": 200,
+        #     "data": notices_list
+        #     # "data": serializer.data
+        # }
     except Exception as e:
+        # res = e
         res = {
             "code": 0,
             "errMsg": e
@@ -94,11 +96,12 @@ def search_notice_by_title_like(request):
             }
             notices_list.append(temp_notice)
         # serializer = StudentSerializer(students, many=True)
-        res = {
-            "code": 200,
-            "data": notices_list
-            # "data": serializer.data
-        }
+        res = notices_list
+        # res = {
+        #     "code": 200,
+        #     "data": notices_list
+        #     # "data": serializer.data
+        # }
     except Exception as e:
         res = {
             "code": 0,
@@ -140,10 +143,11 @@ def search_notice_by_organizer_account(request):
             }
         else:
             temp_notice = {}
-        res = {
-            "code": 200,
-            "data": temp_notice
-        }
+        res = temp_notice
+        # res = {
+        #     "code": 200,
+        #     "data": temp_notice
+        # }
     except Exception as e:
         res = {
             "code": 0,
@@ -192,10 +196,11 @@ def add_notice(request):
                 },
                 "content": notice.content
             }
-        res = {
-            "code": 200,
-            "data": temp_notice
-        }
+        res = temp_notice
+        # res = {
+        #     "code": 200,
+        #     "data": temp_notice
+        # }
     except Exception as e:
         res = {
             "code": 0,
@@ -243,10 +248,11 @@ def update_notice(request):
             }
         else:
             temp_notice = {}
-        res = {
-            "code": 200,
-            "data": temp_notice
-        }
+        res = temp_notice
+        # res = {
+        #     "code": 200,
+        #     "data": temp_notice
+        # }
     except Exception as e:
         res = {
             "code": 0,
@@ -271,10 +277,11 @@ def delete_notice(request):
             result = {
                 "code": 400
             }
-        res = {
-            "code": 200,
-            "data": result
-        }
+        res = result
+        # res = {
+        #     "code": 200,
+        #     "data": result
+        # }
     except Exception as e:
         res = {
             "code": 0,

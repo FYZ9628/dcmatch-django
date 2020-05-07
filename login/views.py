@@ -58,10 +58,11 @@ def login(request):
                 result = {
                     "code": 400
                 }
-            res = {
-                "code": 200,
-                "data": result
-            }
+            res = result
+            # res = {
+            #     "code": 200,
+            #     "data": result
+            # }
             return HttpResponse(json.dumps(res), content_type="application/json")
         if users2.__len__() != 0:
             if users2[0].type == 3:
@@ -89,10 +90,11 @@ def login(request):
                 result = {
                     "code": 400
                 }
-            res = {
-                "code": 200,
-                "data": result
-            }
+            res = result
+            # res = {
+            #     "code": 200,
+            #     "data": result
+            # }
             return HttpResponse(json.dumps(res), content_type="application/json")
         if registers.__len__() != 0:
             result = {
@@ -109,10 +111,11 @@ def login(request):
         result = {
             "code": 400
         }
-        res = {
-            "code": 200,
-            "data": result
-        }
+        res = result
+        # res = {
+        #     "code": 200,
+        #     "data": result
+        # }
     except Exception as e:
         res = {
             "code": 0,

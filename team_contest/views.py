@@ -86,11 +86,12 @@ def get_all_team_contest(request):
             }
             team_contests_list.append(temp_team_contest)
         # serializer = StudentSerializer(students, many=True)
-        res = {
-            "code": 200,
-            "data": team_contests_list
-            # "data": serializer.data
-        }
+        res = team_contests_list
+        # res = {
+        #     "code": 200,
+        #     "data": team_contests_list
+        #     # "data": serializer.data
+        # }
     except Exception as e:
         res = {
             "code": 0,
@@ -172,11 +173,12 @@ def search_all_team_contest_by_student_account(request):
             }
             team_contests_list.append(temp_team_contest)
         # serializer = StudentSerializer(students, many=True)
-        res = {
-            "code": 200,
-            "data": team_contests_list
-            # "data": serializer.data
-        }
+        res = team_contests_list
+        # res = {
+        #     "code": 200,
+        #     "data": team_contests_list
+        #     # "data": serializer.data
+        # }
     except Exception as e:
         res = {
             "code": 0,
@@ -258,11 +260,12 @@ def search_all_team_contest_by_teacher_account(request):
             }
             team_contests_list.append(temp_team_contest)
         # serializer = StudentSerializer(students, many=True)
-        res = {
-            "code": 200,
-            "data": team_contests_list
-            # "data": serializer.data
-        }
+        res = team_contests_list
+        # res = {
+        #     "code": 200,
+        #     "data": team_contests_list
+        #     # "data": serializer.data
+        # }
     except Exception as e:
         res = {
             "code": 0,
@@ -346,11 +349,12 @@ def search_all_team_contest_by_organizer_account(request):
             }
             team_contests_list.append(temp_team_contest)
         # serializer = StudentSerializer(students, many=True)
-        res = {
-            "code": 200,
-            "data": team_contests_list
-            # "data": serializer.data
-        }
+        res = team_contests_list
+        # res = {
+        #     "code": 200,
+        #     "data": team_contests_list
+        #     # "data": serializer.data
+        # }
     except Exception as e:
         res = {
             "code": 0,
@@ -432,10 +436,11 @@ def search_team_contest_by_id(request):
             }
         else:
             temp_team_contest = {}
-        res = {
-            "code": 200,
-            "data": temp_team_contest
-        }
+        res = temp_team_contest
+        # res = {
+        #     "code": 200,
+        #     "data": temp_team_contest
+        # }
     except Exception as e:
         res = {
             "code": 0,
@@ -517,11 +522,12 @@ def search_all_team_contest_by_team_name(request):
             }
             team_contests_list.append(temp_team_contest)
         # serializer = StudentSerializer(students, many=True)
-        res = {
-            "code": 200,
-            "data": team_contests_list
-            # "data": serializer.data
-        }
+        res = team_contests_list
+        # res = {
+        #     "code": 200,
+        #     "data": team_contests_list
+        #     # "data": serializer.data
+        # }
     except Exception as e:
         res = {
             "code": 0,
@@ -606,11 +612,12 @@ def search_all_team_contest_by_team_name_and_contest_detail_id(request):
             }
             team_contests_list.append(temp_team_contest)
         # serializer = StudentSerializer(students, many=True)
-        res = {
-            "code": 200,
-            "data": team_contests_list
-            # "data": serializer.data
-        }
+        res = team_contests_list
+        # res = {
+        #     "code": 200,
+        #     "data": team_contests_list
+        #     # "data": serializer.data
+        # }
     except Exception as e:
         res = {
             "code": 0,
@@ -692,11 +699,12 @@ def search_all_team_contest_by_contest_detail_id(request):
             }
             team_contests_list.append(temp_team_contest)
         # serializer = StudentSerializer(students, many=True)
-        res = {
-            "code": 200,
-            "data": team_contests_list
-            # "data": serializer.data
-        }
+        res = team_contests_list
+        # res = {
+        #     "code": 200,
+        #     "data": team_contests_list
+        #     # "data": serializer.data
+        # }
     except Exception as e:
         res = {
             "code": 0,
@@ -796,11 +804,12 @@ def add_team_contest(request):
                     "remarks": team_contest.remarks
                 }
                 team_contest_list.append(temp_team_contest)
-        res = {
-            "code": 200,
-            # "data": temp_team_contest
-            "data": team_contest_list
-        }
+        res = team_contest_list
+        # res = {
+        #     "code": 200,
+        #     # "data": temp_team_contest
+        #     "data": team_contest_list
+        # }
     except Exception as e:
         res = {
             "code": 0,
@@ -988,10 +997,11 @@ def update_team_contest(request):
             }
         else:
             temp_team_contest = {}
-        res = {
-            "code": 200,
-            "data": temp_team_contest
-        }
+        res = temp_team_contest
+        # res = {
+        #     "code": 200,
+        #     "data": temp_team_contest
+        # }
     except Exception as e:
         res = {
             "code": 0,
@@ -1016,10 +1026,11 @@ def delete_team_contest(request):
             result = {
                 "code": 400
             }
-        res = {
-            "code": 200,
-            "data": result
-        }
+        res = result
+        # res = {
+        #     "code": 200,
+        #     "data": result
+        # }
     except Exception as e:
         res = {
             "code": 0,
@@ -1044,10 +1055,11 @@ def delete_team_contest_by_team(request):
             result = {
                 "code": 400
             }
-        res = {
-            "code": 200,
-            "data": result
-        }
+        res = result
+        # res = {
+        #     "code": 200,
+        #     "data": result
+        # }
     except Exception as e:
         res = {
             "code": 0,

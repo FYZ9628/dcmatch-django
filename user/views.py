@@ -22,10 +22,11 @@ def get_all_user(request):
         # 序列化适用于没有外键的表
         # 有外键的表用序列化就只有引用的那一列列名
         serializer = UserSerializer(users, many=True)
-        res = {
-            "code": 200,
-            "data": serializer.data
-        }
+        res = serializer.data
+        # res = {
+        #     "code": 200,
+        #     "data": serializer.data
+        # }
     except Exception as e:
         res = {
             "code": 0,
@@ -42,10 +43,11 @@ def search_user(request):
         # 获取符合条件的 user 数据
         users = User.objects.filter(name=data.__getitem__('keywords'))
         serializer = UserSerializer(users, many=True)
-        res = {
-            "code": 200,
-            "data": serializer.data
-        }
+        res = serializer.data
+        # res = {
+        #     "code": 200,
+        #     "data": serializer.data
+        # }
     except Exception as e:
         res = {
             "code": 0,
@@ -82,12 +84,13 @@ def search_user_by_account(request):
         # serializer = UserSerializer(users, many=True)
         # print('测试serializer')
         # print(serializer.data)
-        res = {
-            "code": 200,
-            "data": temp_user
-            # "data": {'test1': '接家教'}
-            # "data": serializer.data
-        }
+        res = temp_user
+        # res = {
+        #     "code": 200,
+        #     "data": temp_user
+        #     # "data": {'test1': '接家教'}
+        #     # "data": serializer.data
+        # }
     except Exception as e:
         res = {
             "code": 0,
@@ -113,10 +116,11 @@ def search_user_by_phone(request):
             }
         else:
             temp_user = {}
-        res = {
-            "code": 200,
-            "data": temp_user
-        }
+        res = temp_user
+        # res = {
+        #     "code": 200,
+        #     "data": temp_user
+        # }
     except Exception as e:
         res = {
             "code": 0,
@@ -148,10 +152,11 @@ def add_user(request):
                 "name": user.name,
                 "type": user.type
             }
-        res = {
-            "code": 200,
-            "data": temp_user
-        }
+        res = temp_user
+        # res = {
+        #     "code": 200,
+        #     "data": temp_user
+        # }
     except Exception as e:
         res = {
             "code": 0,
@@ -186,10 +191,11 @@ def update_user(request):
             }
         else:
             temp_user = {}
-        res = {
-            "code": 200,
-            "data": temp_user
-        }
+        res = temp_user
+        # res = {
+        #     "code": 200,
+        #     "data": temp_user
+        # }
     except Exception as e:
         res = {
             "code": 0,
@@ -221,10 +227,11 @@ def delete_user(request):
             result = {
                 "code": 400
             }
-        res = {
-            "code": 200,
-            "data": result
-        }
+        res = result
+        # res = {
+        #     "code": 200,
+        #     "data": result
+        # }
     except Exception as e:
         res = {
             "code": 0,

@@ -43,11 +43,12 @@ def get_all_organizer(request):
             }
             organizers_list.append(temp_organizer)
         # serializer = StudentSerializer(students, many=True)
-        res = {
-            "code": 200,
-            "data": organizers_list
-            # "data": serializer.data
-        }
+        res = organizers_list
+        # res = {
+        #     "code": 200,
+        #     "data": organizers_list
+        #     # "data": serializer.data
+        # }
     except Exception as e:
         res = {
             "code": 0,
@@ -86,11 +87,12 @@ def search_organizer(request):
             }
             organizers_list.append(temp_organizer)
         # serializer = StudentSerializer(students, many=True)
-        res = {
-            "code": 200,
-            "data": organizers_list
-            # "data": serializer.data
-        }
+        res = organizers_list
+        # res = {
+        #     "code": 200,
+        #     "data": organizers_list
+        #     # "data": serializer.data
+        # }
     except Exception as e:
         res = {
             "code": 0,
@@ -125,10 +127,11 @@ def search_organizer_by_account(request):
             }
         else:
             temp_organizer = {}
-        res = {
-            "code": 200,
-            "data": temp_organizer
-        }
+        res = temp_organizer
+        # res = {
+        #     "code": 200,
+        #     "data": temp_organizer
+        # }
     except Exception as e:
         res = {
             "code": 0,
@@ -184,10 +187,11 @@ def add_organizer(request):
                 "schoolRunningType": organizer.school_running_type,
                 "idImg": organizer.id_img,
             }
-        res = {
-            "code": 200,
-            "data": temp_organizer
-        }
+        res = temp_organizer
+        # res = {
+        #     "code": 200,
+        #     "data": temp_organizer
+        # }
     except Exception as e:
         res = {
             "code": 0,
@@ -239,10 +243,11 @@ def update_organizer(request):
             }
         else:
             temp_organizer = {}
-        res = {
-            "code": 200,
-            "data": temp_organizer
-        }
+        res = temp_organizer
+        # res = {
+        #     "code": 200,
+        #     "data": temp_organizer
+        # }
     except Exception as e:
         res = {
             "code": 0,
@@ -270,10 +275,11 @@ def delete_organizer(request):
             result = {
                 "code": 400
             }
-        res = {
-            "code": 200,
-            "data": result
-        }
+        res = result
+        # res = {
+        #     "code": 200,
+        #     "data": result
+        # }
     except Exception as e:
         res = {
             "code": 0,

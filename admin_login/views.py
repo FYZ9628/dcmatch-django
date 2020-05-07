@@ -36,18 +36,20 @@ def admin_login(request):
                 result = {
                     "code": 400
                 }
-            res = {
-                "code": 200,
-                "data": result
-            }
+            res = result
+            # res = {
+            #     "code": 200,
+            #     "data": result
+            # }
             return HttpResponse(json.dumps(res), content_type="application/json")
         result = {
             "code": 400
         }
-        res = {
-            "code": 200,
-            "data": result
-        }
+        res = result
+        # res = {
+        #     "code": 200,
+        #     "data": result
+        # }
     except Exception as e:
         res = {
             "code": 0,
@@ -85,10 +87,11 @@ def update_password(request):
             }
         else:
             temp_user = {}
-        res = {
-            "code": 200,
-            "data": temp_user
-        }
+        res = temp_user
+        # res = {
+        #     "code": 200,
+        #     "data": temp_user
+        # }
     except Exception as e:
         res = {
             "code": 0,

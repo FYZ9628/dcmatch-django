@@ -24,10 +24,11 @@ def get_all_banner(request):
         # 获取所有 user 数据
         banners = Banner.objects.all()
         serializer = BannerSerializer(banners, many=True)
-        res = {
-            "code": 200,
-            "data": serializer.data
-        }
+        res = serializer.data
+        # res = {
+        #     "code": 200,
+        #     "data": serializer.data
+        # }
     except Exception as e:
         res = {
             "code": 0,
@@ -44,10 +45,11 @@ def search_banner_by_name_like(request):
         banners = Banner.objects.filter(Q(name__icontains=data.__getitem__('keywords')))
         # schools = School.objects.filter(name=data.__getitem__('keywords'))
         serializer = BannerSerializer(banners, many=True)
-        res = {
-            "code": 200,
-            "data": serializer.data
-        }
+        res = serializer.data
+        # res = {
+        #     "code": 200,
+        #     "data": serializer.data
+        # }
     except Exception as e:
         res = {
             "code": 0,
@@ -76,10 +78,11 @@ def add_banner(request):
                 "name": banner.name,
                 "src": banner.src,
             }
-        res = {
-            "code": 200,
-            "data": temp_banner
-        }
+        res = temp_banner
+        # res = {
+        #     "code": 200,
+        #     "data": temp_banner
+        # }
     except Exception as e:
         res = {
             "code": 0,
@@ -107,10 +110,11 @@ def update_banner(request):
             }
         else:
             temp_banner = {}
-        res = {
-            "code": 200,
-            "data": temp_banner
-        }
+        res = temp_banner
+        # res = {
+        #     "code": 200,
+        #     "data": temp_banner
+        # }
     except Exception as e:
         res = {
             "code": 0,
@@ -135,10 +139,11 @@ def delete_banner(request):
             result = {
                 "code": 400
             }
-        res = {
-            "code": 200,
-            "data": result
-        }
+        res = result
+        # res = {
+        #     "code": 200,
+        #     "data": result
+        # }
     except Exception as e:
         res = {
             "code": 0,

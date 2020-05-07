@@ -23,10 +23,11 @@ def get_all_register(request):
         # 获取所有 user 数据
         registers = Register.objects.all()
         serializer = RegisterSerializer(registers, many=True)
-        res = {
-            "code": 200,
-            "data": serializer.data
-        }
+        res = serializer.data
+        # res = {
+        #     "code": 200,
+        #     "data": serializer.data
+        # }
     except Exception as e:
         res = {
             "code": 0,
@@ -49,10 +50,11 @@ def search_register_by_phone(request):
             }
         else:
             temp_register = {}
-        res = {
-            "code": 200,
-            "data": temp_register
-        }
+        res = temp_register
+        # res = {
+        #     "code": 200,
+        #     "data": temp_register
+        # }
     except Exception as e:
         res = {
             "code": 0,
@@ -79,10 +81,11 @@ def add_register(request):
                 "phone": register.phone,
                 "password": register.password
             }
-        res = {
-            "code": 200,
-            "data": temp_register
-        }
+        res = temp_register
+        # res = {
+        #     "code": 200,
+        #     "data": temp_register
+        # }
     except Exception as e:
         res = {
             "code": 0,
@@ -111,10 +114,11 @@ def update_register(request):
             }
         else:
             temp_register = {}
-        res = {
-            "code": 200,
-            "data": temp_register
-        }
+        res = temp_register
+        # res = {
+        #     "code": 200,
+        #     "data": temp_register
+        # }
     except Exception as e:
         res = {
             "code": 0,
@@ -144,10 +148,11 @@ def update_register_by_id(request):
             }
         else:
             temp_register = {}
-        res = {
-            "code": 200,
-            "data": temp_register
-        }
+        res = temp_register
+        # res = {
+        #     "code": 200,
+        #     "data": temp_register
+        # }
     except Exception as e:
         res = {
             "code": 0,
@@ -176,10 +181,11 @@ def delete_register(request):
             result = {
                 "code": 400
             }
-        res = {
-            "code": 200,
-            "data": result
-        }
+        res = result
+        # res = {
+        #     "code": 200,
+        #     "data": result
+        # }
     except Exception as e:
         res = {
             "code": 0,

@@ -46,11 +46,12 @@ def get_all_student(request):
             }
             students_list.append(temp_student)
         # serializer = StudentSerializer(students, many=True)
-        res = {
-            "code": 200,
-            "data": students_list
-            # "data": serializer.data
-        }
+        res = students_list
+        # res = {
+        #     "code": 200,
+        #     "data": students_list
+        #     # "data": serializer.data
+        # }
     except Exception as e:
         res = {
             "code": 0,
@@ -91,11 +92,12 @@ def search_student(request):
             }
             students_list.append(temp_student)
         # serializer = StudentSerializer(students, many=True)
-        res = {
-            "code": 200,
-            "data": students_list
-            # "data": serializer.data
-        }
+        res = students_list
+        # res = {
+        #     "code": 200,
+        #     "data": students_list
+        #     # "data": serializer.data
+        # }
     except Exception as e:
         res = {
             "code": 0,
@@ -133,10 +135,11 @@ def search_student_by_account(request):
             }
         else:
             temp_student = {}
-        res = {
-            "code": 200,
-            "data": temp_student
-        }
+        res = temp_student
+        # res = {
+        #     "code": 200,
+        #     "data": temp_student
+        # }
     except Exception as e:
         res = {
             "code": 0,
@@ -198,10 +201,11 @@ def add_student(request):
                 "education": student.education,
                 "idImg": student.id_img,
             }
-        res = {
-            "code": 200,
-            "data": temp_student
-        }
+        res = temp_student
+        # res = {
+        #     "code": 200,
+        #     "data": temp_student
+        # }
     except Exception as e:
         res = {
             "code": 0,
@@ -259,10 +263,11 @@ def update_student(request):
             }
         else:
             temp_student = {}
-        res = {
-            "code": 200,
-            "data": temp_student
-        }
+        res = temp_student
+        # res = {
+        #     "code": 200,
+        #     "data": temp_student
+        # }
     except Exception as e:
         res = {
             "code": 0,
@@ -290,10 +295,11 @@ def delete_student(request):
             result = {
                 "code": 400
             }
-        res = {
-            "code": 200,
-            "data": result
-        }
+        res = result
+        # res = {
+        #     "code": 200,
+        #     "data": result
+        # }
     except Exception as e:
         res = {
             "code": 0,
