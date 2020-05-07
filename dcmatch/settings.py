@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'contest_detail',
     'contest',
     'team_contest',
+    'login',
 ]
 
 MIDDLEWARE = [

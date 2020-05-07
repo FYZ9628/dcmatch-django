@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="70feb5ac-592f-4549-9ab2-14104018e2e7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/login/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/login/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/team_contest/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/team_contest/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dcmatch/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/dcmatch/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dcmatch/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/dcmatch/urls.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,114 +20,33 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/team_contest/views.py">
+        <entry file="file://$PROJECT_DIR$/login/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-456">
-              <caret line="715" column="34" selection-start-line="715" selection-start-column="34" selection-end-line="715" selection-end-column="34" />
+            <state relative-caret-position="351">
+              <caret line="64" column="81" lean-forward="true" selection-start-line="64" selection-start-column="81" selection-end-line="64" selection-end-column="81" />
               <folding>
-                <element signature="e#0#30#0" expanded="true" />
-                <element signature="e#31792#35394#0" />
-                <element signature="e#37123#40725#0" />
-                <element signature="e#40728#45724#0" />
-                <element signature="e#41592#45394#0" />
-                <element signature="e#45778#46433#0" />
+                <element signature="e#0#36#0" expanded="true" />
+                <element signature="e#1081#2120#0" />
+                <element signature="e#1191#1267#0" />
+                <element signature="e#1382#1588#0" />
+                <element signature="e#1643#1849#0" />
+                <element signature="e#1884#1960#0" />
+                <element signature="e#1963#2062#0" />
+                <element signature="e#1185#1242#0" />
+                <element signature="e#2468#2674#0" />
+                <element signature="e#2729#2935#0" />
+                <element signature="e#2970#3030#0" />
+                <element signature="e#3250#3745#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/team_contest/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="37" column="38" selection-start-line="37" selection-start-column="38" selection-end-line="37" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/team_contest/serializers.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-214">
-              <caret line="9" column="27" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="27" />
-              <folding>
-                <element signature="e#0#38#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/contest_detail/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4401">
-              <caret line="440" column="12" selection-start-line="440" selection-start-column="12" selection-end-line="440" selection-end-column="36" />
-              <folding>
-                <element signature="e#0#30#0" expanded="true" />
-                <element signature="e#716#2557#0" />
-                <element signature="e#3334#5092#0" />
-                <element signature="e#5619#8092#0" />
-                <element signature="e#8177#10661#0" />
-                <element signature="e#8443#10327#0" />
-                <element signature="e#10762#13261#0" />
-                <element signature="e#14471#16229#0" />
-                <element signature="e#17692#19554#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/contest_detail/admin.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/contest_detail/apps.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/contest_detail/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="11" column="19" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/contest_detail/serializers.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="648">
-              <caret line="27" column="18" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="18" />
-              <folding>
-                <element signature="e#0#38#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/student/serializers.py">
+        <entry file="file://$PROJECT_DIR$/login/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
-              <caret line="6" selection-start-line="6" selection-end-line="8" selection-end-column="32" />
-              <folding>
-                <element signature="e#0#38#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/student/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="7" column="27" lean-forward="true" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
-              <folding>
-                <element signature="e#0#32#0" expanded="true" />
-              </folding>
+              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
             </state>
           </provider>
         </entry>
@@ -138,8 +59,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/register/serializers.py" />
-        <option value="$PROJECT_DIR$/register/urls.py" />
         <option value="$PROJECT_DIR$/register/models.py" />
         <option value="$PROJECT_DIR$/register/views.py" />
         <option value="$PROJECT_DIR$/banner/models.py" />
@@ -180,8 +99,6 @@
         <option value="$PROJECT_DIR$/contest/models.py" />
         <option value="$PROJECT_DIR$/contest/urls.py" />
         <option value="$PROJECT_DIR$/contest/views.py" />
-        <option value="$PROJECT_DIR$/dcmatch/settings.py" />
-        <option value="$PROJECT_DIR$/dcmatch/urls.py" />
         <option value="$PROJECT_DIR$/team_contest/serializers.py" />
         <option value="$PROJECT_DIR$/team_contest/urls.py" />
         <option value="$PROJECT_DIR$/user/serializers.py" />
@@ -189,12 +106,16 @@
         <option value="$PROJECT_DIR$/contest_detail/views.py" />
         <option value="$PROJECT_DIR$/team_contest/models.py" />
         <option value="$PROJECT_DIR$/team_contest/views.py" />
+        <option value="$PROJECT_DIR$/login/urls.py" />
+        <option value="$PROJECT_DIR$/dcmatch/settings.py" />
+        <option value="$PROJECT_DIR$/dcmatch/urls.py" />
+        <option value="$PROJECT_DIR$/login/views.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-44" />
-    <option name="y" value="12" />
+    <option name="x" value="63" />
+    <option name="y" value="21" />
     <option name="width" value="1545" />
     <option name="height" value="1039" />
   </component>
@@ -218,7 +139,17 @@
             <path>
               <item name="dcmatch" type="b2602c69:ProjectViewProjectNode" />
               <item name="dcmatch" type="462c0819:PsiDirectoryNode" />
-              <item name="team_contest" type="462c0819:PsiDirectoryNode" />
+              <item name="login" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dcmatch" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dcmatch" type="462c0819:PsiDirectoryNode" />
+              <item name="register" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dcmatch" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dcmatch" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -229,7 +160,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/team_contest" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/login" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="restartRequiresConfirmation" value="false" />
@@ -237,11 +168,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\PyCharm file\dcmatch\login" />
       <recent name="D:\PyCharm file\dcmatch\team_contest" />
       <recent name="D:\PyCharm file\dcmatch\app" />
       <recent name="D:\PyCharm file\dcmatch\teacher" />
       <recent name="D:\PyCharm file\dcmatch\student" />
-      <recent name="D:\PyCharm file\dcmatch\school" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -311,7 +242,7 @@
       <workItem from="1588726715512" duration="5100000" />
       <workItem from="1588769110270" duration="4062000" />
       <workItem from="1588776430896" duration="23000" />
-      <workItem from="1588812673329" duration="4645000" />
+      <workItem from="1588812673329" duration="9062000" />
     </task>
     <task id="LOCAL-00001" summary="user的增删改查一套操作都完成了">
       <created>1587870082292</created>
@@ -397,14 +328,21 @@
       <option name="project" value="LOCAL" />
       <updated>1588731061279</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="teamContest表新增团队竞赛按数组添加">
+      <created>1588818483474</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1588818483475</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="134777000" />
+    <option name="totallyTimeSpent" value="139194000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-35" y="10" width="1236" height="831" extended-state="0" />
+    <frame x="51" y="17" width="1236" height="831" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1901528" />
@@ -412,7 +350,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.11444921" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.17453505" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39969373" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -447,20 +385,10 @@
     <MESSAGE value="contestDetail表的增删改查完成" />
     <MESSAGE value="contest表的增删改查完成" />
     <MESSAGE value="teamContest表的增删改查完成" />
-    <option name="LAST_COMMIT_MESSAGE" value="teamContest表的增删改查完成" />
+    <MESSAGE value="teamContest表新增团队竞赛按数组添加" />
+    <option name="LAST_COMMIT_MESSAGE" value="teamContest表新增团队竞赛按数组添加" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/models.py" />
-    <entry file="file://$PROJECT_DIR$/user/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/teacher/serializers.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="27">
@@ -492,13 +420,6 @@
           <folding>
             <element signature="e#0#30#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/register/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="6" column="15" lean-forward="true" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
         </state>
       </provider>
     </entry>
@@ -556,32 +477,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/register/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/school/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="7" column="40" lean-forward="true" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-162">
-          <caret line="150" column="15" lean-forward="true" selection-start-line="150" selection-start-column="15" selection-end-line="150" selection-end-column="15" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -694,35 +595,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/contest/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-316">
-          <caret line="603" column="19" selection-end-line="625" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-            <element signature="e#797#4128#0" />
-            <element signature="e#4707#8404#0" />
-            <element signature="e#8703#11944#0" />
-            <element signature="e#12463#14930#0" />
-            <element signature="e#12699#16624#0" />
-            <element signature="e#16706#20403#0" />
-            <element signature="e#21059#24984#0" />
-            <element signature="e#25206#28539#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dcmatch/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="29" column="19" lean-forward="true" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#630#1" />
-            <element signature="e#631#663#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/contest/serializers.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -744,13 +616,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="17" column="38" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -796,31 +661,6 @@
             <element signature="e#262#509#1" />
             <element signature="e#712#1506#0" />
             <element signature="e#3610#4800#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dcmatch/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1053">
-          <caret line="39" column="12" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/contest_detail/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4401">
-          <caret line="440" column="12" selection-start-line="440" selection-start-column="12" selection-end-line="440" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-            <element signature="e#716#2557#0" />
-            <element signature="e#3334#5092#0" />
-            <element signature="e#5619#8092#0" />
-            <element signature="e#8177#10661#0" />
-            <element signature="e#8443#10327#0" />
-            <element signature="e#10762#13261#0" />
-            <element signature="e#14471#16229#0" />
-            <element signature="e#17692#19554#0" />
           </folding>
         </state>
       </provider>
@@ -885,17 +725,132 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/team_contest/views.py">
+    <entry file="file://$PROJECT_DIR$/contest_detail/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-456">
-          <caret line="715" column="34" selection-start-line="715" selection-start-column="34" selection-end-line="715" selection-end-column="34" />
+        <state relative-caret-position="1755">
+          <caret line="129" column="41" lean-forward="true" selection-start-line="129" selection-start-column="41" selection-end-line="129" selection-end-column="41" />
           <folding>
             <element signature="e#0#30#0" expanded="true" />
+            <element signature="e#716#2557#0" />
+            <element signature="e#3334#5092#0" />
+            <element signature="e#8177#10661#0" />
+            <element signature="e#8443#10327#0" />
+            <element signature="e#10762#13261#0" />
+            <element signature="e#14471#16229#0" />
+            <element signature="e#17692#19554#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/contest/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="381">
+          <caret line="344" column="24" lean-forward="true" selection-start-line="344" selection-start-column="24" selection-end-line="344" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+            <element signature="e#679#3920#0" />
+            <element signature="e#4691#7932#0" />
+            <element signature="e#8716#11957#0" />
+            <element signature="e#12699#16032#0" />
+            <element signature="e#16690#19931#0" />
+            <element signature="e#21045#24286#0" />
+            <element signature="e#25206#28539#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/register/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="132" column="50" lean-forward="true" selection-start-line="129" selection-start-column="8" selection-end-line="132" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dcmatch/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="339">
+          <caret line="33" column="33" lean-forward="true" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#630#1" />
+            <element signature="e#631#663#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dcmatch/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="447">
+          <caret line="51" column="10" selection-start-line="51" selection-start-column="10" selection-end-line="51" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/team_contest/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="540" column="46" lean-forward="true" selection-start-line="539" selection-start-column="12" selection-end-line="540" selection-end-column="46" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+            <element signature="e#27381#30983#0" />
             <element signature="e#31792#35394#0" />
             <element signature="e#37123#40725#0" />
             <element signature="e#40728#45724#0" />
             <element signature="e#41592#45394#0" />
             <element signature="e#45778#46433#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="150" column="15" lean-forward="true" selection-start-line="150" selection-start-column="15" selection-end-line="150" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/register/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="14" column="12" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="14" column="32" lean-forward="true" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="64" column="81" lean-forward="true" selection-start-line="64" selection-start-column="81" selection-end-line="64" selection-end-column="81" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+            <element signature="e#1081#2120#0" />
+            <element signature="e#1191#1267#0" />
+            <element signature="e#1382#1588#0" />
+            <element signature="e#1643#1849#0" />
+            <element signature="e#1884#1960#0" />
+            <element signature="e#1963#2062#0" />
+            <element signature="e#1185#1242#0" />
+            <element signature="e#2468#2674#0" />
+            <element signature="e#2729#2935#0" />
+            <element signature="e#2970#3030#0" />
+            <element signature="e#3250#3745#0" />
           </folding>
         </state>
       </provider>
