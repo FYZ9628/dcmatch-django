@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'login',
     'admin_login',
     'sign_up',
+    'up_load_img',
 ]
 
 MIDDLEWARE = [

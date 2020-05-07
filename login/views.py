@@ -98,15 +98,16 @@ def login(request):
             return HttpResponse(json.dumps(res), content_type="application/json")
         if registers.__len__() != 0:
             result = {
-                "code": 300,
+                "code": 500,
                 "account": registers[0].phone,
                 "password": registers[0].password,
                 "name": registers[0].phone
             }
-            res = {
-                "code": 200,
-                "data": result
-            }
+            res = result
+            # res = {
+            #     "code": 200,
+            #     "data": result
+            # }
             return HttpResponse(json.dumps(res), content_type="application/json")
         result = {
             "code": 400

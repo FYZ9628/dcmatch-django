@@ -19,80 +19,15 @@ from register.models import Register
 
 
 @csrf_exempt
-def team_sign_up_add_student(request):
+def up_load_img(request):
     try:
-        data = json.loads(request.body)
-        # 获取符合条件的 user 数据
-        users1 = User.objects.filter(
-            account=data.__getitem__('account'),
-            name=data.__getitem__('name')
-        )
-        users2 = User.objects.filter(
-            phone=data.__getitem__('account'),
-            name=data.__getitem__('name')
-        )
-        if users1.__len__() != 0:
-            students = Student.objects.filter(user_id=users1[0].id)
-            temp_student = {
-                "id": students[0].id,
-                "user": {
-                    "id": users1[0].id,
-                    "account": users1[0].account,
-                    "phone": users1[0].phone,
-                    "password": users1[0].password,
-                    "name": users1[0].name,
-                    "type": users1[0].type
-                },
-                "sex": students[0].sex,
-                "email": students[0].email,
-                "school": students[0].school,
-                "admissionDate": students[0].admission_date,
-                "graduationDate": students[0].graduation_date,
-                "academy": students[0].academy,
-                "major": students[0].major,
-                "education": students[0].education,
-                "idImg": students[0].id_img,
-            }
-            res = temp_student
-            # res = {
-            #     "code": 200,
-            #     "data": temp_student
-            # }
-            return HttpResponse(json.dumps(res), content_type="application/json")
-        if users2.__len__() != 0:
-            students = Student.objects.filter(user_id=users2[0].id)
-            temp_student = {
-                "id": students[0].id,
-                "user": {
-                    "id": users2[0].id,
-                    "account": users2[0].account,
-                    "phone": users2[0].phone,
-                    "password": users2[0].password,
-                    "name": users2[0].name,
-                    "type": users2[0].type
-                },
-                "sex": students[0].sex,
-                "email": students[0].email,
-                "school": students[0].school,
-                "admissionDate": students[0].admission_date,
-                "graduationDate": students[0].graduation_date,
-                "academy": students[0].academy,
-                "major": students[0].major,
-                "education": students[0].education,
-                "idImg": students[0].id_img,
-            }
-            res = temp_student
-            # res = {
-            #     "code": 200,
-            #     "data": temp_student
-            # }
-            return HttpResponse(json.dumps(res), content_type="application/json")
-        temp_student = {}
-        res = temp_student
-        # res = {
-        #     "code": 200,
-        #     "data": temp_student
-        # }
+        img_files = request.FILES.get('')
+        print('测试上传图片')
+        print(img_files)
+        res = {
+            "code": 200,
+            "data": {}
+        }
     except Exception as e:
         res = {
             "code": 0,
@@ -102,82 +37,19 @@ def team_sign_up_add_student(request):
 
 
 @csrf_exempt
-def team_sign_up_add_teacher(request):
+def delete_img(request):
     try:
         data = json.loads(request.body)
-        # 获取符合条件的 user 数据
-        users1 = User.objects.filter(
-            account=data.__getitem__('account'),
-            name=data.__getitem__('name')
-        )
-        users2 = User.objects.filter(
-            phone=data.__getitem__('account'),
-            name=data.__getitem__('name')
-        )
-        if users1.__len__() != 0:
-            teachers = Teacher.objects.filter(user_id=users1[0].id)
-            temp_teacher = {
-                "id": teachers[0].id,
-                "user": {
-                    "id": users1[0].id,
-                    "account": users1[0].account,
-                    "phone": users1[0].phone,
-                    "password": users1[0].password,
-                    "name": users1[0].name,
-                    "type": users1[0].type
-                },
-                "sex": teachers[0].sex,
-                "email": teachers[0].email,
-                "school": teachers[0].school,
-                "entryDate": teachers[0].entry_date,
-                "academy": teachers[0].academy,
-                "professionalTitle": teachers[0].professional_title,
-                "education": teachers[0].education,
-                "idImg": teachers[0].id_img,
-            }
-            res = temp_teacher
-            # res = {
-            #     "code": 200,
-            #     "data": temp_teacher
-            # }
-            return HttpResponse(json.dumps(res), content_type="application/json")
-        if users2.__len__() != 0:
-            teachers = Teacher.objects.filter(user_id=users2[0].id)
-            temp_teacher = {
-                "id": teachers[0].id,
-                "user": {
-                    "id": users2[0].id,
-                    "account": users2[0].account,
-                    "phone": users2[0].phone,
-                    "password": users2[0].password,
-                    "name": users2[0].name,
-                    "type": users2[0].type
-                },
-                "sex": teachers[0].sex,
-                "email": teachers[0].email,
-                "school": teachers[0].school,
-                "entryDate": teachers[0].entry_date,
-                "academy": teachers[0].academy,
-                "professionalTitle": teachers[0].professional_title,
-                "education": teachers[0].education,
-                "idImg": teachers[0].id_img,
-            }
-            res = temp_teacher
-            # res = {
-            #     "code": 200,
-            #     "data": temp_teacher
-            # }
-            return HttpResponse(json.dumps(res), content_type="application/json")
-        temp_teacher = {}
-        res = temp_teacher
-        # res = {
-        #     "code": 200,
-        #     "data": temp_teacher
-        # }
+        image_path = data.__getitem__('imagePath')
+        print('测试删除图片')
+        print(image_path)
+        res = {
+            "code": 200,
+            "data": {}
+        }
     except Exception as e:
         res = {
             "code": 0,
             "errMsg": e
         }
     return HttpResponse(json.dumps(res), content_type="application/json")
-
