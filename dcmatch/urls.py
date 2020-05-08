@@ -13,8 +13,10 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from django.conf.urls import url
 from django.contrib import admin
 from django.urls import path, include
+from django.views.static import serve
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -37,4 +39,7 @@ urlpatterns = [
     path('api/', include('up_load_img.urls')),
     # 和上面两个语句的作用一样，都是可以访问到数据，不同的是这种方法不用在user中创建一个urls表
     # url(r'^user', user_views.user),
+    # 通过本地服务器访图片
+    # 访问地址 http://localhost:8999/api/file/student_id_card.jpg
+    url(r'^api/file/(?P<path>.*)$', serve, {'document_root': 'd:/workspace/img/dcmatch/'})
 ]

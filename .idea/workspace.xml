@@ -1,23 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="70feb5ac-592f-4549-9ab2-14104018e2e7" name="Default Changelist" comment="admin_login登录接口、signUp接口完成">
+    <list default="true" id="70feb5ac-592f-4549-9ab2-14104018e2e7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin_login/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/admin_login/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/banner/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/banner/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contest/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/contest/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contest_detail/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/contest_detail/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dcmatch/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/dcmatch/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notice/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/notice/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/organizer/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/organizer/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/register/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/register/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/school/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/school/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sign_up/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/sign_up/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/student/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/teacher/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/teacher/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/team_contest/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/team_contest/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dcmatch/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/dcmatch/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/up_load_img/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/up_load_img/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,12 +18,25 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/user/views.py">
+        <entry file="file://$PROJECT_DIR$/up_load_img/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5778">
-              <caret line="226" column="22" lean-forward="true" selection-start-line="226" selection-start-column="22" selection-end-line="226" selection-end-column="22" />
+            <state relative-caret-position="240">
+              <caret line="60" column="28" selection-start-line="60" selection-start-column="23" selection-end-line="60" selection-end-column="28" />
               <folding>
-                <element signature="e#0#36#0" expanded="true" />
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dcmatch/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="246">
+              <caret line="42" column="23" selection-start-line="42" selection-start-column="23" selection-end-line="42" selection-end-column="23" />
+              <folding>
+                <element signature="e#0#630#1" />
+                <element signature="e#631#663#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -50,8 +50,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/school/models.py" />
-        <option value="$PROJECT_DIR$/school/serializers.py" />
         <option value="$PROJECT_DIR$/teacher/serializers.py" />
         <option value="$PROJECT_DIR$/app/urls.py" />
         <option value="$PROJECT_DIR$/app/views.py" />
@@ -85,14 +83,11 @@
         <option value="$PROJECT_DIR$/login/urls.py" />
         <option value="$PROJECT_DIR$/admin_login/urls.py" />
         <option value="$PROJECT_DIR$/sign_up/urls.py" />
-        <option value="$PROJECT_DIR$/dcmatch/urls.py" />
-        <option value="$PROJECT_DIR$/dcmatch/settings.py" />
         <option value="$PROJECT_DIR$/notice/views.py" />
         <option value="$PROJECT_DIR$/banner/views.py" />
         <option value="$PROJECT_DIR$/admin_login/views.py" />
         <option value="$PROJECT_DIR$/contest/views.py" />
         <option value="$PROJECT_DIR$/contest_detail/views.py" />
-        <option value="$PROJECT_DIR$/login/views.py" />
         <option value="$PROJECT_DIR$/organizer/views.py" />
         <option value="$PROJECT_DIR$/register/views.py" />
         <option value="$PROJECT_DIR$/school/views.py" />
@@ -101,12 +96,18 @@
         <option value="$PROJECT_DIR$/teacher/views.py" />
         <option value="$PROJECT_DIR$/team_contest/views.py" />
         <option value="$PROJECT_DIR$/user/views.py" />
+        <option value="$PROJECT_DIR$/login/views.py" />
+        <option value="$PROJECT_DIR$/dcmatch/settings.py" />
+        <option value="$PROJECT_DIR$/up_load_img/urls.py" />
+        <option value="$PROJECT_DIR$/dcmatch/urls.py" />
+        <option value="$PROJECT_DIR$/up_load_img/views.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="58" />
-    <option name="width" value="1624" />
+    <option name="x" value="-28" />
+    <option name="y" value="11" />
+    <option name="width" value="1412" />
     <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -124,6 +125,26 @@
             <path>
               <item name="dcmatch" type="b2602c69:ProjectViewProjectNode" />
               <item name="dcmatch" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dcmatch" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dcmatch" type="462c0819:PsiDirectoryNode" />
+              <item name="dcmatch" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dcmatch" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dcmatch" type="462c0819:PsiDirectoryNode" />
+              <item name="login" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dcmatch" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dcmatch" type="462c0819:PsiDirectoryNode" />
+              <item name="teacher" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dcmatch" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dcmatch" type="462c0819:PsiDirectoryNode" />
+              <item name="up_load_img" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -143,11 +164,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\PyCharm file\dcmatch\up_load_img" />
       <recent name="D:\PyCharm file\dcmatch\sign_up" />
       <recent name="D:\PyCharm file\dcmatch\admin_login" />
       <recent name="D:\PyCharm file\dcmatch\login" />
       <recent name="D:\PyCharm file\dcmatch\team_contest" />
-      <recent name="D:\PyCharm file\dcmatch\app" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -219,7 +240,8 @@
       <workItem from="1588776430896" duration="23000" />
       <workItem from="1588812673329" duration="13391000" />
       <workItem from="1588827760382" duration="4298000" />
-      <workItem from="1588856995731" duration="6328000" />
+      <workItem from="1588856995731" duration="9173000" />
+      <workItem from="1588925468962" duration="10604000" />
     </task>
     <task id="LOCAL-00001" summary="user的增删改查一套操作都完成了">
       <created>1587870082292</created>
@@ -326,21 +348,36 @@
       <option name="project" value="LOCAL" />
       <updated>1588827661458</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="所有接口和前端对接完成">
+      <created>1588864309940</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1588864309940</updated>
+    </task>
+    <task id="LOCAL-00017" summary="所有接口和前端对接完成22">
+      <created>1588866985270</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1588866985270</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="154149000" />
+    <option name="totallyTimeSpent" value="167598000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="126" y="31" width="1299" height="832" extended-state="0" />
+    <frame x="-22" y="9" width="1129" height="832" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.186946" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22035481" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.15285714" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2957143" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39969373" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -378,26 +415,11 @@
     <MESSAGE value="teamContest表新增团队竞赛按数组添加" />
     <MESSAGE value="login登录接口完成" />
     <MESSAGE value="admin_login登录接口、signUp接口完成" />
-    <option name="LAST_COMMIT_MESSAGE" value="admin_login登录接口、signUp接口完成" />
+    <MESSAGE value="所有接口和前端对接完成" />
+    <MESSAGE value="所有接口和前端对接完成22" />
+    <option name="LAST_COMMIT_MESSAGE" value="所有接口和前端对接完成22" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/school/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/school/serializers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/school/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
@@ -651,13 +673,6 @@
     <entry file="file://$PROJECT_DIR$/dcmatch/asgi.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/dcmatch/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1026">
-          <caret line="38" column="26" selection-start-line="38" selection-start-column="26" selection-end-line="38" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/notice/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="447">
@@ -686,17 +701,6 @@
             <element signature="e#1632#2432#0" />
             <element signature="e#2480#3276#0" />
             <element signature="e#3324#3950#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dcmatch/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="27" column="21" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#630#1" />
-            <element signature="e#631#663#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -735,16 +739,6 @@
           <folding>
             <element signature="e#0#30#0" expanded="true" />
             <element signature="e#679#3920#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3051">
-          <caret line="113" column="20" selection-start-line="113" selection-start-column="14" selection-end-line="113" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -801,16 +795,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/teacher/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="290" column="18" lean-forward="true" selection-start-line="290" selection-start-column="18" selection-end-line="290" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/team_contest/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="339">
@@ -825,10 +809,65 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/user/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5778">
-          <caret line="226" column="22" lean-forward="true" selection-start-line="226" selection-start-column="22" selection-end-line="226" selection-end-column="22" />
+        <state relative-caret-position="108">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
           <folding>
             <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dcmatch/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-281">
+          <caret line="73" column="13" lean-forward="true" selection-start-line="73" selection-start-column="13" selection-end-line="73" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1918">
+          <caret line="100" column="28" lean-forward="true" selection-start-line="100" selection-start-column="28" selection-end-line="100" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/teacher/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="277" column="68" lean-forward="true" selection-start-line="274" selection-start-column="8" selection-end-line="277" selection-end-column="68" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/up_load_img/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dcmatch/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="42" column="23" selection-start-line="42" selection-start-column="23" selection-end-line="42" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#630#1" />
+            <element signature="e#631#663#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/up_load_img/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="60" column="28" selection-start-line="60" selection-start-column="23" selection-end-line="60" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
