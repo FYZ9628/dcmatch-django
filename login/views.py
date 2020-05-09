@@ -32,6 +32,8 @@ def login(request):
             phone=data.__getitem__('account'),
             password=data.__getitem__('password')
         )
+        print(users1.__len__())
+        print(users2.__len__())
         if users1.__len__() != 0:
             if users1[0].type == 3:
                 result = {
@@ -40,6 +42,7 @@ def login(request):
                     "password": users1[0].password,
                     "name": users1[0].name
                 }
+                return HttpResponse(json.dumps(result), content_type="application/json")
             elif users1[0].type == 2:
                 result = {
                     "code": 200,
@@ -47,6 +50,7 @@ def login(request):
                     "password": users1[0].password,
                     "name": users1[0].name
                 }
+                return HttpResponse(json.dumps(result), content_type="application/json")
             elif users1[0].type == 6:
                 result = {
                     "code": 600,
@@ -54,16 +58,17 @@ def login(request):
                     "password": users1[0].password,
                     "name": users1[0].name
                 }
-            else:
-                result = {
-                    "code": 400
-                }
-            res = result
+                return HttpResponse(json.dumps(result), content_type="application/json")
+            # else:
+            #     result = {
+            #         "code": 400
+            #     }
+            # res = result
             # res = {
             #     "code": 200,
             #     "data": result
             # }
-            return HttpResponse(json.dumps(res), content_type="application/json")
+            # return HttpResponse(json.dumps(res), content_type="application/json")
         if users2.__len__() != 0:
             if users2[0].type == 3:
                 result = {
@@ -72,6 +77,7 @@ def login(request):
                     "password": users2[0].password,
                     "name": users2[0].name
                 }
+                return HttpResponse(json.dumps(result), content_type="application/json")
             elif users2[0].type == 2:
                 result = {
                     "code": 200,
@@ -79,6 +85,7 @@ def login(request):
                     "password": users2[0].password,
                     "name": users2[0].name
                 }
+                return HttpResponse(json.dumps(result), content_type="application/json")
             elif users2[0].type == 6:
                 result = {
                     "code": 600,
@@ -86,16 +93,17 @@ def login(request):
                     "password": users2[0].password,
                     "name": users2[0].name
                 }
-            else:
-                result = {
-                    "code": 400
-                }
-            res = result
+                return HttpResponse(json.dumps(result), content_type="application/json")
+            # else:
+            #     result = {
+            #         "code": 400
+            #     }
+            # res = result
             # res = {
             #     "code": 200,
             #     "data": result
             # }
-            return HttpResponse(json.dumps(res), content_type="application/json")
+            # return HttpResponse(json.dumps(res), content_type="application/json")
         if registers.__len__() != 0:
             result = {
                 "code": 500,
@@ -103,12 +111,13 @@ def login(request):
                 "password": registers[0].password,
                 "name": registers[0].phone
             }
-            res = result
+            return HttpResponse(json.dumps(result), content_type="application/json")
+            # res = result
             # res = {
             #     "code": 200,
             #     "data": result
             # }
-            return HttpResponse(json.dumps(res), content_type="application/json")
+            # return HttpResponse(json.dumps(res), content_type="application/json")
         result = {
             "code": 400
         }
